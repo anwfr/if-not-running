@@ -1,9 +1,9 @@
 {
-  "name": "ifNotRunning",
+  "name": "if-not-running",
   "version": "0.0.1",
   "description": "Run JS function if it's not running",
   "license": "UNLICENSE",
-  "repository": "anwfr/ifNotRunning",
+  "repository": "anwfr/if-not-running",
   "main": "index.js",
   "keywords": [
     "concurrency",

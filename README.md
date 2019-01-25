@@ -1,5 +1,5 @@
-# ifNotRunning
-ifNotRunning.run('foo', bar): run bar() if it's not currently running
+# if-not-running
+Run JS function if it's not running
 
 Parameters:
 + unique identifier
