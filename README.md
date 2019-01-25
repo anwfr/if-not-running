@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/anwfr/if-not-running.svg?branch=master)](https://travis-ci.org/anwfr/if-not-running)
 
 # if-not-running
-Run JS function if it's not running
+Run JS function if it's not running currently.
 
 ### Usage
 Parameters:
