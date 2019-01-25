@@ -3,13 +3,29 @@ class IfNotRunning {
     this.processes = {}
   }
   run (key, process) {
-    if (this.processes[key] === undefined) {
-      this.processes[key] = process().then(result => {
-        this.processes[key] = undefined
+    let result = this.processes[key]
+    if (result === undefined) {
+      // run
+      result = process()
+
+      // lock
+      this.processes[key] = result
+
+      const unlock = () => this.processes[key] = undefined
+      if (result && typeof result.then === 'function') {
+        // promise => unlock when promise ends
         return result
-      })
+          .then(result => {
+            unlock()
+            return result
+          })
+          .catch(unlock)
+      } else {
+        // not a promise => unlock now
+        unlock()
+      }
     }
-    return this.processes[key]
+    return result
   }
 }
 
