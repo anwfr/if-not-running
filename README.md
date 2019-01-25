@@ -1,5 +1,6 @@
 [![npm (scoped)](https://img.shields.io/npm/v/if-not-running.svg)](https://www.npmjs.com/package/if-not-running)
 [![npm bundle size (minified)](https://img.shields.io/bundlephobia/min/if-not-running.svg)](https://www.npmjs.com/package/if-not-running)
+[![Build Status](https://travis-ci.org/anwfr/if-not-running.svg?branch=master)](https://travis-ci.org/anwfr/if-not-running)
 
 # if-not-running
 Run JS function if it's not running
