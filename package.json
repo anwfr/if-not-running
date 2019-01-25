@@ -1,0 +1,21 @@
+{
+  "name": "ifNotRunning",
+  "version": "0.0.1",
+  "description": "Run JS function if it's not running",
+  "license": "UNLICENSE",
+  "repository": "anwfr/ifNotRunning",
+  "main": "index.js",
+  "keywords": [
+    "concurrency",
+    "run",
+    "running",
+    "currently",
+    "one",
+    "time",
+    "process",
+    "mutex",
+    "exclusive",
+    "lock",
+    "promise"
+  ]
+}
