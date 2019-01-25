@@ -10,12 +10,12 @@ const verify = async (bar, counter) => {
   ifNot.run('foo', bar) // run
   expected++
 
-  ifNot.run('foo', bar) // won't run
+  ifNot.run('foo', bar) // don't run
 
   ifNot.run('anotherOne', bar) // run
   expected++
 
-  ifNot.run('anotherOne', bar) // won't run
+  ifNot.run('anotherOne', bar) // don't run
 
   // verify
   await sleep(2*DELAY)
@@ -24,7 +24,7 @@ const verify = async (bar, counter) => {
   ifNot.run('foo', bar) // run
   expected++
 
-  ifNot.run('foo', bar) // won't run
+  ifNot.run('foo', bar) // don't run
   await sleep(2*DELAY)
 
   assert.equal(counter.i, expected);

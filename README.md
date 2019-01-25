@@ -5,23 +5,50 @@
 # if-not-running
 Run JS function if it's not running
 
+### Usage
 Parameters:
 + unique identifier
-+ function to run
++ process to run (supports synchronous and asynchronous functions).
 
-Example:
+Returns: value returned from process
+
+### Example
 ```js
 import ifNot from 'if-not-running'
 
-const bar = () => {
-    console.log('Started');
-    await sleep(2000);
-    console.log('Ended');
+const job = () => {
+  // long job...
 }
-ifNot.run('foo', bar) // will run
-ifNot.run('foo', bar) // won't run
-ifNot.run('anotherOne', bar) // will run
-await sleep(2000)
-ifNot.run('foo', bar) // will run
-ifNot.run('foo', bar) // won't run
+ifNot.run('foo', job) // run
+ifNot.run('foo', job) // don't run (still running)
+
+ifNot.run('anotherJob', job) // run
+ifNot.run('anotherJob', job) // don't run (still running)
+
+// when job finished...
+ifNot.run('foo', job) // run
+ifNot.run('anotherJob', job) // run
+```
+
+Supports synchronous processes:
+```js
+const job = () => {
+  // long job...
+  return 123
+}
+const result = ifNot.run('foo', job) // result = 123
+```
+
+As well as asynchronous processes:
+```js
+// process can be asynchronous
+const job = () => {
+  return new Promise((resolve, reject) => {
+      // long job...
+      resolve(123)
+  })
+}
+ifNot.run('foo', job).then(result => {
+  // result = 123
+})
 ```
