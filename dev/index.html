@@ -1,0 +1,23 @@
+<html>
+<body>
+<script src="../dist/if-not-running.umd.js"></script>
+</body>
+</html>
+<script>
+  const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms))
+
+  // promise
+  ifNotRunning.run('foo', ()=>{console.log('run'); return sleep(500);}); // run
+  ifNotRunning.run('foo', ()=>console.log('dontRun')); // dont't run
+
+  // no value returned
+  ifNotRunning.run('foo', async ()=>{console.log('run2'); await sleep(500);}); // run
+  ifNotRunning.run('foo', ()=>console.log('dontRun2')); // dont't run
+
+  // value returned
+  ifNotRunning.run('foo', async ()=>{console.log('run3'); await sleep(500); return 3;}); // run
+  ifNotRunning.run('foo', ()=>console.log('dontRun3')); // dont't run
+
+  const result4 = ifNotRunning.run('another', ()=>{console.log('run4'); return 4;}); // run
+  console.log("result4="+result4);
+</script>

@@ -52,3 +52,20 @@ ifNot.run('foo', job).then(result => {
   // result = 123
 })
 ```
+
+
+## Development
+
+### Running tests
+
+```sh
+yarn
+yarn test
+yarn test --watch
+```
+
+### Dev mode
+
+```
+yarn watch
+```

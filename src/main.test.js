@@ -1,5 +1,5 @@
 import assert from 'assert'
-import ifNot from './index'
+import ifNot from './main.js';
 
 const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms))
 
@@ -19,7 +19,7 @@ const verify = async (bar, counter) => {
 
   // verify
   await sleep(2*DELAY)
-  assert.equal(counter.i, expected);
+  assert.strictEqual(counter.i, expected);
 
   ifNot.run('foo', bar) // run
   expected++
@@ -27,7 +27,7 @@ const verify = async (bar, counter) => {
   ifNot.run('foo', bar) // don't run
   await sleep(2*DELAY)
 
-  assert.equal(counter.i, expected);
+  assert.strictEqual(counter.i, expected);
 }
 
 describe('ifNot.run', () => {
