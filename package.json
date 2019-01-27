@@ -22,8 +22,8 @@
   },
   "scripts": {
     "prepare": "npm run build",
-    "build": "rollup -c",
-    "watch": "rollup -c -w",
+    "build": "yarn rollup -c",
+    "watch": "yarn rollup -c -w",
     "test": "jest && npm run build"
   },
   "renovate": {
