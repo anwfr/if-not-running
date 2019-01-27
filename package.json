@@ -1,6 +1,6 @@
 {
   "name": "if-not-running",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "main": "dist/if-not-running.cjs.js",
   "module": "dist/if-not-running.esm.js",
   "browser": "dist/if-not-running.umd.js",
