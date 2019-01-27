@@ -5,7 +5,7 @@ before_install:
 cache:
   yarn: true
 deploy:
-  provider: npm
+  provider: yarn
   email: antoine.spam@uid.fr
   api_key:
     secure: djpN1KOaZEfI+RAwMfWdL3iiNN2gvENOC+w/qWG+iOld/TayW0UslcT80X93dOY8jZ1F1OgaKS1nSiMuDbUYmMLSSNMBn9lWJQGdEf9qbfcUP62sLUcQKieNZwroZeMBB+uZtp8j+bBw/xN+zlA9OHey8tCAoOA3F/wkWiHg2AWa+pykNifzwEs2Sb5qmy1qex0pAFF2dLJSXw+grP9LYYA3b3sjjqKJjQLJLCo8zrIVunPjLoSWK8zDj+uY7EkNwZ0i14iGqdt+al/2//PgBjKk7uv7iFVlfUNq8yvws6AvTVECTIU3ZDiGzGN4W75SrGATvmjP/aUcmAgjG6PmuCWSjR/By+dcLti2Z0UHMqIk1Umg/K82dFlpjE78mvF77SnVAZUfrMd1b3o+DUaK99zpotvdsQ/mkJlU6YzYGucYJTLseQZXwF0pzQ/tQE16f8nTOyxArK4E/p+CpEegNJhh1k/oCfJii4PxTbe/YqdgiaI7jUMMu7TKUatrHmc9c/bUPVo3182fH+JMupk/MKVrZ3F7e1B8P9Kh5O/vBRTsQaocnbhxLET0MLwfClN+uVPnsdPqyFSt4hA+XhWk6K/JyOLPv34kLO9KW7BC27BeDHrMvdgUtBmH4PoJGtUlmKTLXpVtIVQiLZzDRAZXZKjnSJMj4JbDJw6RhsrCmbE=
